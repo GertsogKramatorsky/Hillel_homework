@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log(typeof 'some text');  // string
+
+        console.log(typeof 33);  // number
+
+        console.log(typeof 33n);  // bigint
+
+        console.log(typeof Symbol('some text'));  // symbol
+
+        console.log(typeof true);  // boolean
+        
+        console.log(typeof someValue);  // undefined
+
+        console.log(document.getElementById('nonExistingId'));  // null
+
+        console.log(typeof Math);  // object
+
+
+        let firstString = 'I`m glad';
+        let secondString = 'to study JS';
+        let thirdString = 'with Hillel school';
+        console.log(`${firstString} ${secondString} ${thirdString}!`); // виведення 3х рядків за допомогою шаблонного рядка
+
+
+        let num = 54321;
+        function spacesBetweenNumbs(num) {
+            let result = '';
+            let str = String(num);
+            for (let i = 0; i < str.length; i ++) {
+                result += `${str[i]} `;
+            }
+            return result;
+        }
+        console.log(spacesBetweenNumbs(num)); // функція, що бере в якості аргумента число, і повертає в рядку усі цифри цього числа через пробіл
+    </script>
+</body>
+</html>
