@@ -1,6 +1,6 @@
 // 5.1 
 let str = "";
-for (i = 20; i <= 30; i += 0.5) {
+for (let i = 20; i <= 30; i += 0.5) {
     str = `${str + i} `;
 }
 console.log(str);
@@ -10,13 +10,13 @@ console.log(str);
 let dollarRate = 26;
 let cashInDollars = 100;
 let cashInHryvnas = 0;
-for (i = 10; i <= cashInDollars; i += 10) {
+for (let i = 10; i <= cashInDollars; i += 10) {
     cashInHryvnas = dollarRate * i;
     console.log(`${i} доларів коштують ${cashInHryvnas} гривень`);
 }
 
 // 5.3
-let N = prompt("Введіть ціле число", "");
+let N = prompt("Введіть ціле число (перевірка на квадрат)", "");
 let i = 1;
 while (i * i <= N) {
     if (i < 100) {
@@ -27,9 +27,9 @@ while (i * i <= N) {
 
 
 // 5.4
-let num = +prompt("Введіть ціле число", "");
+let num = +prompt("Введіть ціле число (перевірка на просте число)", "");
 let counter = 0;    // рахує кількість чисел, на які ділеться num без залишку
-for (i = 1; i <= num; i++) {
+for (let i = 1; i <= num; i++) {
     if (num % i == 0) {
         counter ++;
     }
