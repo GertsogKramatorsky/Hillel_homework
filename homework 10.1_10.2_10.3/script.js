@@ -23,8 +23,7 @@ userInfo.getUserInfo();
 let arr = [1, 2, 3, 4, 5, 10, 23, 41, -2, -3];
 
 function getEvenNumbers(array) {
-    let arrEven = arr.filter((num) => num % 2 === 0);
-    return arrEven;
+    return arr.filter((num) => num % 2 === 0); // повертає новий масив
 } 
 
 console.log(getEvenNumbers(arr));
