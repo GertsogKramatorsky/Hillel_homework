@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>13.1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="POST" class="form">
+        <div class="container">
+            <h1>We would like to help you</h1>
+            <input type="text" class="name" name="name" placeholder="Name">
+            <span class="error-message" id="error-message--name"></span>
+
+            <textarea class="message" name="message" placeholder="Message"></textarea>
+            <span class="error-message" id="error-message--message"></span>
+
+            <h2>HOW TO ANSWER YOU?</h2>
+
+            <input type="tel" class="number" name="number" placeholder="Phone number">
+            <span class="error-message" id="error-message--number"></span>
+
+            <input type="text" class="email" name="email" placeholder="Email">
+            <span class="error-message" id="error-message--email"></span>
+
+            <button type="submit" class="submit">Send message</button>
+        </div>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
