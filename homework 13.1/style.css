@@ -1,0 +1,71 @@
+.container {
+    margin: 0 auto;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: #F5F5FA;
+    padding: 50px;
+}
+h1 {
+    font-size: 50px;
+    font-weight: 700;
+    color: #F01A5C;
+}
+h2 {
+    margin-top: 40px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #ABAFB6;
+}
+input, textarea {
+    border: none;
+    min-height: 40px;
+    padding-left: 5px;
+    font-size: 15px;
+    color: grey;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+}
+.name {
+    margin-top: 20px;
+}
+.message {
+    margin-top: 30px;
+    min-height: 80px;
+}
+.email {
+    margin-top: 30px;
+}
+.submit {
+    border: none;
+    margin-top: 30px;
+    height: 60px;
+    background-color: #24A3FF;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    border-radius: 12px;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+::placeholder {
+    padding-left: 5px;
+    font-size: 15px;
+    color: #ABAFB6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+}
+.error-message {
+    font-size: 10px;
+    color: red;
+}
+
+@keyframes pop {
+    0%   { transform: scale(1); }
+    50%  { transform: scale(0.95); }
+    100% { transform: scale(1); }
+}
+.submit-clicked {
+    animation: pop 0.2s ease;
+}
