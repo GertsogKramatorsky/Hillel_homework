@@ -8,49 +8,48 @@ function Student (firstName, secondName, yearOfBirth, scores) {
 
     this.getYearOfBirth = function() {
         return this.yearOfBirth;
-    };
-
-    Student.prototype.getAverageScore = function() {
-        let sumOfScores = 0;
-        for (let i = 0; i < this.scores.length; i++) {
-            sumOfScores += this.scores[i];
-        }
-        return Math.round(sumOfScores/this.scores.length);        
-    };
-
-    Student.prototype.present = function() {
-        for (let i = 0; i < this.attendance.length; i++) {
-            if (this.attendance[i] === null) {
-                this.attendance[i] = true;
-                break;
-            }
-        }
-    };
-
-    Student.prototype.absent = function() {
-        for (let i = 0; i < this.attendance.length; i++) {
-            if (this.attendance[i] === null) {
-                this.attendance[i] = false;
-                break;
-            }
-        }
-    };
-
-    Student.prototype.summary = function() {
-        let presenceArr = this.attendance.filter((a) => a === true);
-        let averageAttendance = presenceArr.length/this.attendance.length;
-        let averageScore = this.getAverageScore();
-        
-        if (averageScore > 90 && averageAttendance > 0.9) {
-            console.log('Молодець!');
-        } else if (averageScore < 90 && averageAttendance < 0.9) {
-            console.log('Редиска!');
-        } else {
-            console.log('Добре, але можна краще!');
-        }
     }
 }
 
+Student.prototype.getAverageScore = function() {
+    let sumOfScores = 0;
+    for (let i = 0; i < this.scores.length; i++) {
+        sumOfScores += this.scores[i];
+    }
+    return Math.round(sumOfScores/this.scores.length);        
+};
+
+Student.prototype.present = function() {
+    for (let i = 0; i < this.attendance.length; i++) {
+        if (this.attendance[i] === null) {
+            this.attendance[i] = true;
+            break;
+        }
+    }
+};
+
+Student.prototype.absent = function() {
+    for (let i = 0; i < this.attendance.length; i++) {
+        if (this.attendance[i] === null) {
+            this.attendance[i] = false;
+            break;
+        }
+    }
+};
+
+Student.prototype.summary = function() {
+    let presenceArr = this.attendance.filter((a) => a === true);
+    let averageAttendance = presenceArr.length/this.attendance.length;
+    let averageScore = this.getAverageScore();
+    
+    if (averageScore > 90 && averageAttendance > 0.9) {
+        console.log('Молодець!');
+    } else if (averageScore < 90 && averageAttendance < 0.9) {
+        console.log('Редиска!');
+    } else {
+        console.log('Добре, але можна краще!');
+    }
+}
 
 const student1 = new Student ('Vladyslav', 'Shestakov', 1991, [91, 95, 86, 99]);
 for (let i = 0; i < 25; i++) {
