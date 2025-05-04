@@ -5,10 +5,10 @@ function Student (firstName, secondName, yearOfBirth, scores) {
     this.scores = scores;
     this.attendance = new Array(25).fill(null);
     Object.seal(this.attendance);  
+}
 
-    this.getYearOfBirth = function() {
-        return this.yearOfBirth;
-    }
+Student.prototype.getYearOfBirth = function () {
+    return this.yearOfBirth;
 }
 
 Student.prototype.getAverageScore = function() {
