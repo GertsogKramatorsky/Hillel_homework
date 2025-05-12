@@ -25,5 +25,6 @@ class Timer {
 
 const btnStartTimer = document.getElementById('start-timer');
 const myTimer = new Timer('timer', 5);
+
 myTimer.updateDisplay();
 btnStartTimer.addEventListener('click', myTimer.start.bind(myTimer));
