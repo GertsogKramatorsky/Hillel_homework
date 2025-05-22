@@ -1,5 +1,6 @@
 import $ from 'jquery';
-
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import { Modal } from 'bootstrap'; 
 class ToDoList {
     constructor() {
         this.tasks = JSON.parse(localStorage.getItem('tasks')) || [];
@@ -86,4 +87,13 @@ $('.js--todos-wrapper').on('click', function(event) {
 });
 
 
+const $modalEl = $('#exampleModal');
+const $modalBodyEl = $('.modal-body');
+const bootstrapModal = new Modal($modalEl[0]);
+
+$('.js--todos-wrapper').on('click', '.todo-item__description', function () {
+    const taskText = $(this).text(); 
+    $modalBodyEl.text(taskText); 
+    bootstrapModal.show(); 
+});
 
