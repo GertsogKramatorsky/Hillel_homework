@@ -12,8 +12,8 @@ const ToDoList = () => {
 			const errors = {};
 			if (!values.task.trim()) {
 				errors.task = "Поле не може бути порожнім";
-			} else if (values.task.trim().length < 2) {
-				errors.task = "Мінімум 2 символи";
+			} else if (values.task.trim().length < 5) {
+				errors.task = "Мінімум 5 символи";
 			}
 			return errors;
 		},
